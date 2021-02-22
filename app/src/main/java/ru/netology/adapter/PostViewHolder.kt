@@ -1,5 +1,7 @@
 package ru.netology.adapter
 
+import android.view.View.GONE
+import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import ru.netology.Post
 import ru.netology.R
@@ -29,9 +31,36 @@ class PostViewHolder(
                 onListenerPress.onVievingListener(post)
             }
 
+
+
+
+
             textLike.text = post.likes.toString()
             textToSend.text = calculator(post.toSends)
             textViewing.text = calculator(post.viewings)
+
+
+
+            menu.setOnClickListener {
+                PopupMenu(it.context, it).apply {
+                    inflate(R.menu.options_post)
+                    setOnMenuItemClickListener { item ->
+                        when (item.itemId) {
+                            R.id.remove -> {
+                                onListenerPress.onRemove(post)
+                                true
+                            }
+                            R.id.edit -> {
+                                onListenerPress.onEdit(post)
+                                true
+                            }
+
+                            else -> false
+                        }
+                    }
+                }.show()
+            }
+
         }
     }
 }

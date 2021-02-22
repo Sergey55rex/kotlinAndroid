@@ -7,12 +7,6 @@ import androidx.recyclerview.widget.ListAdapter
 import ru.netology.Post
 import ru.netology.databinding.CardPostBinding
 
-interface OnListenerPress{
-    fun onLikeListener(post: Post)
-    fun onToSendListener(post: Post)
-    fun onVievingListener(post: Post)
-}
-
 class PostAdapter(
         private val onListenerPress: OnListenerPress,
 ) : ListAdapter<Post, PostViewHolder>(PostDiffCallback()){
