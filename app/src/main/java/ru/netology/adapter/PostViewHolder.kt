@@ -17,16 +17,28 @@ class PostViewHolder(
             author.text = post.author
             published.text = post.published
             content.text = post.content
-            imageLike.setImageResource(
-                if (post.liked) R.drawable.ic_liked_24 else R.drawable.ic_baseline_favorite_border_24
-            )
+//            imageLike.setImageResource(
+//                if (post.liked) R.drawable.ic_liked_24 else R.drawable.ic_baseline_favorite_border_24
+//            )
+
+            imageLike.isChecked = post.liked
+            imageLike.text = "${post.likes}"
+
+
             imageLike.setOnClickListener {
                 onListenerPress.onLikeListener(post)
             }
 
+            imageToSend.isChecked = post.toSend
+            imageToSend.text = "${calculator(post.toSends)}"
+
             imageToSend.setOnClickListener {
                 onListenerPress.onToSendListener(post)
             }
+
+            imageViewing.isChecked = post.viewing
+            imageViewing.text = "${calculator(post.viewings)}"
+
             imageViewing.setOnClickListener {
                 onListenerPress.onVievingListener(post)
             }
@@ -35,9 +47,9 @@ class PostViewHolder(
 
 
 
-            textLike.text = post.likes.toString()
-            textToSend.text = calculator(post.toSends)
-            textViewing.text = calculator(post.viewings)
+  //          textLike.text = post.likes.toString()
+//            textToSend.text = calculator(post.toSends)
+//             textViewing.text = calculator(post.viewings)
 
 
 

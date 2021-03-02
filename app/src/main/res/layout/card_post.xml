@@ -69,63 +69,45 @@
         app:barrierDirection="top"
         app:constraint_referenced_ids="content" />
 
-    <ImageView
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/imageLike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:checkable="true"
         android:layout_marginTop="@dimen/common_spacing"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
-        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+        app:icon="@drawable/ic_liked_24dp"
+        android:contentDescription = "@string/description_post_like"
+        style="@style/Widget.AppTheme.LikeCheckBox"
+        />
 
-    <ImageView
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/imageToSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:checkable="true"
         android:layout_marginStart="@dimen/common_spacing"
         app:layout_constraintBottom_toBottomOf="@+id/imageLike"
-        app:layout_constraintStart_toEndOf="@+id/textLike"
+        app:layout_constraintStart_toEndOf="@+id/imageLike"
         app:layout_constraintTop_toTopOf="@+id/imageLike"
-        app:srcCompat="@drawable/ic_baseline_share_24" />
+        app:icon="@drawable/ic_baseline_share_24"
+        android:contentDescription = "@string/description_post_share"
+        style="@style/Widget.AppTheme.ShareCheckBox"
+        />
 
-    <ImageView
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/imageViewing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/common_spacing"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewing"
-        app:layout_constraintEnd_toStartOf="@+id/textViewing"
-        app:layout_constraintTop_toTopOf="@+id/textViewing"
-        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
-
-    <TextView
-        android:id="@+id/textLike"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/common_spacing"
-        android:text="10"
-        app:layout_constraintBottom_toBottomOf="@+id/imageLike"
-        app:layout_constraintStart_toEndOf="@+id/imageLike"
-        app:layout_constraintTop_toTopOf="@+id/imageLike" />
-
-    <TextView
-        android:id="@+id/textToSend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/common_spacing"
-        android:text="5"
-        app:layout_constraintBottom_toBottomOf="@+id/imageToSend"
-        app:layout_constraintStart_toEndOf="@+id/imageToSend"
-        app:layout_constraintTop_toTopOf="@+id/imageToSend" />
-
-    <TextView
-        android:id="@+id/textViewing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5"
+        android:checkable="true"
         app:layout_constraintBottom_toBottomOf="@+id/imageToSend"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageToSend" />
+        app:layout_constraintTop_toTopOf="@+id/imageToSend"
+        app:icon="@drawable/ic_baseline_remove_red_eye_24"
+        style="@style/Widget.AppTheme.RemoveCheckBox"
+        />
 
     <androidx.constraintlayout.widget.Group
         android:layout_width="@dimen/common_spacing"
@@ -133,5 +115,9 @@
         app:constraint_referenced_ids="avatarId,author,published,menu"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="@dimen/common_spacing" />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

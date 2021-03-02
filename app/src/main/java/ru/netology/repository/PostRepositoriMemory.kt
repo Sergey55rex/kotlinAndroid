@@ -85,11 +85,11 @@ class PostRepositoriMemory: PostRepository {
                     content = "Делиться впечатлениями о любимых фильмах легко, а что если рассказать так, чтобы все заскучали \uD83D\uDE34\n",
                     published = "22 сентября в 10:14",
                     liked = false,
-                    likes = 0,
+                    likes = 2,
                     toSend = false,
                     toSends = 999999,
                     viewing = false,
-                    viewings = 999999
+                    viewings = 999
             ),
             Post(
                     id = nextId++,
@@ -99,7 +99,7 @@ class PostRepositoriMemory: PostRepository {
                     liked = false,
                     likes = 0,
                     toSend = false,
-                    toSends = 999999,
+                    toSends = 999,
                     viewing = false,
                     viewings = 999999
             ),
