@@ -94,6 +94,7 @@
         app:icon="@drawable/ic_baseline_share_24"
         android:contentDescription = "@string/description_post_share"
         style="@style/Widget.AppTheme.ShareCheckBox"
+        android:color="@color/white"
         />
 
 
