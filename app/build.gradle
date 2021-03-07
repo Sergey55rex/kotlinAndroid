@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -53,6 +54,9 @@ dependencies {
     testImplementation "androidx.arch.core:core-testing:$arch_version"
     implementation "androidx.activity:activity-ktx:$activity_version"
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$Lifecycle_version"
 
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

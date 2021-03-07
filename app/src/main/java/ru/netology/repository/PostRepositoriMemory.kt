@@ -17,7 +17,8 @@ class PostRepositoriMemory: PostRepository {
                     toSend = false,
                     toSends = 999,
                     viewing = false,
-                    viewings = 0
+                    viewings = 0,
+                    video = false
             ),
             Post(
                     id = nextId++,
@@ -29,7 +30,8 @@ class PostRepositoriMemory: PostRepository {
                     toSend = false,
                     toSends = 999999,
                     viewing = false,
-                    viewings = 999999
+                    viewings = 999999,
+                    video = false
             ),
             Post(
                     id = nextId++,
@@ -41,7 +43,8 @@ class PostRepositoriMemory: PostRepository {
                     toSend = false,
                     toSends = 0,
                     viewing = false,
-                    viewings = 0
+                    viewings = 0,
+                    video = false
             ),
             Post(
                     id = nextId++,
@@ -53,7 +56,8 @@ class PostRepositoriMemory: PostRepository {
                     toSend = false,
                     toSends = 0,
                     viewing = false,
-                    viewings = 0
+                    viewings = 0,
+                    video = false
             ),
             Post(
                     id = nextId++,
@@ -65,7 +69,8 @@ class PostRepositoriMemory: PostRepository {
                     toSend = false,
                     toSends = 999999,
                     viewing = false,
-                    viewings = 999999
+                    viewings = 999999,
+                    video = false
             ),
             Post(
                     id = nextId++,
@@ -77,7 +82,8 @@ class PostRepositoriMemory: PostRepository {
                     toSend = false,
                     toSends = 999999,
                     viewing = false,
-                    viewings = 999999
+                    viewings = 999999,
+                    video = false
             ),
             Post(
                     id = nextId++,
@@ -89,7 +95,8 @@ class PostRepositoriMemory: PostRepository {
                     toSend = false,
                     toSends = 999999,
                     viewing = false,
-                    viewings = 999
+                    viewings = 999,
+                    video = false
             ),
             Post(
                     id = nextId++,
@@ -101,7 +108,8 @@ class PostRepositoriMemory: PostRepository {
                     toSend = false,
                     toSends = 999,
                     viewing = false,
-                    viewings = 999999
+                    viewings = 999999,
+                    video = true
             ),
 
     ).reversed()
@@ -149,7 +157,8 @@ class PostRepositoriMemory: PostRepository {
                             published = "now",
                             likes = 0,
                             toSend = false,
-                            viewing = false
+                            viewing = false,
+                            video = false
                     )
             ) + posts
             data.value = posts

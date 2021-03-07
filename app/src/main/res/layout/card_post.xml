@@ -67,35 +67,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top"
-        app:constraint_referenced_ids="content" />
+        app:constraint_referenced_ids="content"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="80dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/imageLike"
+        style="@style/Widget.AppTheme.LikeCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checkable="true"
-        android:layout_marginTop="@dimen/common_spacing"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/content"
+        android:contentDescription="@string/description_post_like"
         app:icon="@drawable/ic_liked_24dp"
-        android:contentDescription = "@string/description_post_like"
-        style="@style/Widget.AppTheme.LikeCheckBox"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoButton" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/imageToSend"
+        style="@style/Widget.AppTheme.ShareCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checkable="true"
         android:layout_marginStart="@dimen/common_spacing"
+        android:background="#FFFFFF"
+        android:checkable="true"
+        android:color="@color/white"
+        android:contentDescription="@string/description_post_share"
+        app:icon="@drawable/ic_baseline_share_24"
         app:layout_constraintBottom_toBottomOf="@+id/imageLike"
         app:layout_constraintStart_toEndOf="@+id/imageLike"
-        app:layout_constraintTop_toTopOf="@+id/imageLike"
-        app:icon="@drawable/ic_baseline_share_24"
-        android:contentDescription = "@string/description_post_share"
-        style="@style/Widget.AppTheme.ShareCheckBox"
-        android:color="@color/white"
-        />
+        app:layout_constraintTop_toTopOf="@+id/imageLike" />
 
 
     <com.google.android.material.button.MaterialButton
@@ -117,8 +117,33 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="@dimen/common_spacing" />
 
+    <ImageButton
+        android:id="@+id/videoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/content"
 
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="@+id/content"
+        app:layout_constraintTop_toBottomOf="@+id/content"
+        app:srcCompat="@drawable/samodelkin"
+        tools:visibility="visible" />
 
+    <ImageView
+        android:id="@+id/imagePlay"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/videoButton"
+        app:layout_constraintEnd_toEndOf="@+id/videoButton"
+        app:layout_constraintStart_toStartOf="@+id/videoButton"
+        app:layout_constraintTop_toTopOf="@+id/videoButton"
+        app:srcCompat="@drawable/ic_baseline_play_circle_outline_24"
+        tools:visibility="visible"
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package ru.netology.adapter
 
 import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import ru.netology.Post
@@ -17,6 +18,14 @@ class PostViewHolder(
             author.text = post.author
             published.text = post.published
             content.text = post.content
+            if (post.video == true){
+                videoButton.visibility = VISIBLE
+                imagePlay.visibility = VISIBLE
+            }else{
+                videoButton.visibility = GONE
+                imagePlay.visibility = GONE
+            }
+
 //            imageLike.setImageResource(
 //                if (post.liked) R.drawable.ic_liked_24 else R.drawable.ic_baseline_favorite_border_24
 //            )
@@ -41,6 +50,10 @@ class PostViewHolder(
 
             imageViewing.setOnClickListener {
                 onListenerPress.onVievingListener(post)
+            }
+//видео
+            videoButton.setOnClickListener {
+                onListenerPress.onPlay(post)
             }
 
 

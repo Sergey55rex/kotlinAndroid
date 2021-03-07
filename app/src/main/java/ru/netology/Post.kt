@@ -12,6 +12,7 @@ data class Post(
         var toSend: Boolean = false,
         var toSends: Int,
         var viewing: Boolean = false,
-        var viewings: Int
+        var viewings: Int,
+        var video: Boolean = false
 
 )

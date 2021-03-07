@@ -16,7 +16,8 @@ private val empty = Post(
         toSend = false,
         toSends = 0,
         viewing = false,
-        viewings = 0
+        viewings = 0,
+        video = false
 )
 
 class PostViewModel: ViewModel() {

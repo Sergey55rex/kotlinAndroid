@@ -8,6 +8,7 @@ interface OnListenerPress {
     fun onVievingListener(post: Post)
     fun onEdit(post: Post) {}
     fun onRemove(post: Post) {}
+    fun onPlay(post: Post) {}
 
 
 }
