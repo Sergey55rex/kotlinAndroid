@@ -2,4 +2,5 @@
 <resources>
     <string name="descripion_post_author_avatar" />
     <string name="descripion_post_menu" />
+    <string name="chooser_share_post" />
 </resources>
